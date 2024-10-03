@@ -47,7 +47,7 @@ JOIN employee_salary sal
 
 -- Rank number
 -- Rank asigns the same number for duplicates
-	-- based off the Order By which is salary
+	-- based off the Order By salary
     -- And it assigns the next number positionally
 SELECT dem.employee_id, dem.first_name, dem.last_name, gender, salary,
 ROW_NUMBER() OVER(PARTITION BY gender ORDER BY salary DESC) row_num,
