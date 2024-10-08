@@ -26,11 +26,25 @@ JOIN employee_salary sal
 
 
 -- Rolling Total
-SELECT dem.first_name, dem.last_name, gender, salary,
+SELECT dem.employee_id, dem.first_name, dem.last_name, gender, salary,
 SUM(salary) OVER(PARTITION BY gender ORDER BY dem.employee_id) AS Rolling_Total
 FROM employee_demographics dem
 JOIN employee_salary sal
 	ON dem.employee_id = sal.employee_id
+;
+
+SELECT *
+FROM employee_salary;
+
+
+-- ROlling Total per department
+SELECT sal1.employee_id, sal1.first_name, sal1.last_name, sal1.dept_id, pd.department_name, sal1.salary,
+SUM(sal1.salary) OVER(PARTITION BY sal1.dept_id ORDER BY sal1.employee_id) AS Dept_Rolling_Total
+FROM employee_salary sal1
+JOIN employee_salary sal2
+	ON sal1.employee_id = sal2.employee_id
+JOIN parks_departments pd
+	ON sal1.dept_id = pd.department_id
 ;
 
 
@@ -49,6 +63,8 @@ JOIN employee_salary sal
 -- Rank asigns the same number for duplicates
 	-- based off the Order By salary
     -- And it assigns the next number positionally
+-- Dense rank does the same as Rank
+	-- But assigns the next number numerically
 SELECT dem.employee_id, dem.first_name, dem.last_name, gender, salary,
 ROW_NUMBER() OVER(PARTITION BY gender ORDER BY salary DESC) row_num,
 RANK() OVER(PARTITION BY gender ORDER BY salary DESC) rank_num,

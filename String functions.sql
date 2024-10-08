@@ -2,7 +2,7 @@
 
 SELECT LENGTH('sky');
 
-SELECT first_name, LENGTH(first_name)
+SELECT first_name, LENGTH(first_name) AS name_length
 FROM employee_demographics;
 
 

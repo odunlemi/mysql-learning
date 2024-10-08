@@ -34,7 +34,7 @@ RIGHT JOIN employee_salary AS sal
 ;
 
 
--- Self join]
+-- Self join
 
 SELECT emp1.employee_id AS emp_santa,
 emp1.first_name AS first_name_santa,
@@ -65,7 +65,7 @@ INNER JOIN employee_salary AS sal
 INNER JOIN parks_departments pd
 	ON sal.dept_id = pd.department_id
 GROUP BY dem.employee_id, dem.first_name, dem.last_name, pd.department_id, pd.department_name
-ORDER BY pd.department_id
+ORDER BY pd.department_id DESC
 ;
 
 SELECT *
