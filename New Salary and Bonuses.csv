@@ -1,0 +1,13 @@
+first_name,last_name,salary,New_Salary,Bonus
+Leslie,Knope,75000,80250.00,NULL
+Ron,Swanson,70000,74900.00,NULL
+Tom,Haverford,50000,NULL,NULL
+April,Ludgate,25000,26250.00,NULL
+Jerry,Gergich,50000,NULL,NULL
+Donna,Meagle,60000,64200.00,NULL
+Ann,Perkins,55000,58850.00,NULL
+Chris,Traeger,90000,96300.00,NULL
+Ben,Wyatt,70000,74900.00,7000.00
+Andy,Dwyer,20000,21000.00,NULL
+Mark,Brendanawicz,57000,60990.00,NULL
+Craig,Middlebrooks,65000,69550.00,NULL
