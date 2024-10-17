@@ -56,4 +56,4 @@ These practical exercises helped reinforce the theoretical concepts and gave me 
 
 - [Alex the Analyst's SQL series on YouTube] (https://www.youtube.com/@AlexTheAnalyst)
 - [Selectstarsql] (https://selectstarsql.com/)
-- Tons or Reddit, Google and Stackoverflow searches
+- Tons of Reddit, Google and Stackoverflow searches
